@@ -1,0 +1,23 @@
+{
+  "name": "lostnfound",
+  "version": "1.0.0",
+  "description": "A website built for the 2026 FBLA Website Coding & Development competiton",
+  "keywords": [
+    "default"
+  ],
+  "homepage": "https://github.com/coopericksen/lostnfound#readme",
+  "bugs": {
+    "url": "https://github.com/coopericksen/lostnfound/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopericksen/lostnfound.git"
+  },
+  "license": "ISC",
+  "author": "coopericksen",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "default"
+  }
+}
