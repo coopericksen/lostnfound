@@ -1,20 +1,18 @@
-import path from 'node:path'
-import fs from 'node:fs/promises';
+import dotenv from 'dotenv';
+dotenv.config();
+
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+    process.env.SUPABASE_URL,
+    process.env.SUPABASE_API_KEY
+);
 
 export async function getData() {
     try {
-
-        const pathJSON = path.join('data', 'data.json');
-        const data = await fs.readFile(pathJSON, 'utf-8');
-        const parsedData = JSON.parse(data);
-        return parsedData;
-
-    } catch (err) {
-
-        console.log(err);
-        return [];
-
+        const data = await supabase.from("items").select("*");
+        return data;
+    } catch (error) {
+        console.log("Error connecting to database: ", error);
     }
-
-
-}
+};

@@ -6,10 +6,14 @@ import { getContentType } from './getContentType.js';
 
 export async function serveStatic(req, res, baseDir) {
     const frontendDir = path.join(baseDir, 'frontend');
-    const filePath = path.join(frontendDir,
+    let filePath = path.join(frontendDir,
         req.url === "/" ? 'index.html' : req.url
     )
-    const ext = path.extname(filePath);
+    let ext = path.extname(filePath);
+    if (ext === "") {
+        ext = ".html";
+        filePath += ".html";
+    }
     const contentType = getContentType(ext);
 
     try {
