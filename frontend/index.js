@@ -22,7 +22,7 @@ load_items_button.addEventListener("click", async () => {
 });
 
 let testObjects = [{
-    "id": 1,
+    "id": 4,
     "uuid": "4f32c0ff-0890-411e-9280-41e403590e73",
     "created_at": "2026-01-21T04:09:00.832682+00:00",
     "name": "Inconspicuous Sock",
@@ -37,7 +37,7 @@ let testObjects = [{
     "location_stored": "Counselor Center",
     "claimed": false
 }, {
-    "id": 2,
+    "id": 5,
     "uuid": "4f32c0ff-0890-411e-9280-41e403590e73",
     "created_at": "2026-01-21T04:09:00.832682+00:00",
     "name": "goon Sock",
@@ -52,7 +52,7 @@ let testObjects = [{
     "location_stored": "Counselor Center",
     "claimed": false
 }, {
-    "id": 3,
+    "id": 6,
     "uuid": "4f32c0ff-0890-411e-9280-41e403590e73",
     "created_at": "2026-01-21T04:09:00.832682+00:00",
     "name": "Ew Sock",
@@ -96,7 +96,7 @@ function renderItems(items) {
         element.classList.add("item");
         item_container.appendChild(element);
 
-        const id = createSubEl(element, "p", `Item ${item.id}, Category: ${item.category}`);
+        // const id = createSubEl(element, "p", `Item ${item.id}, Category: ${item.category}`);
         const name = createSubEl(element, "h1", item.name, ["item-name"]);
 
         if (item.image_url != "") {
@@ -105,10 +105,10 @@ function renderItems(items) {
             image.src = item.image_url;
         }
 
-        const description = createSubEl(element, "p", item.description);
+        const description = createSubEl(element, "p", `Description: ${item.description}`);
 
         if (item.additional_information != "") {
-            let note = createSubEl(element, "p", item.additional_information);
+            let note = createSubEl(element, "p", `Additional Information: ${item.additional_information}`);
         }
 
         const found_countainer = createSubEl(element, "div", "", ["item-finder-container"]);
@@ -121,6 +121,7 @@ function renderItems(items) {
 
 
     })
+
 }
 
-// renderItems(testObjects);
+renderItems(testObjects);

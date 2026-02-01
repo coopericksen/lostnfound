@@ -1,0 +1,95 @@
+#report-found-form {
+    /* border: 2px solid white; */
+    margin-inline: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#report-found-form > * {
+    margin: 1rem auto;
+    width: max-content;
+}
+
+#report-found-form input:not([type="submit"]):not([type="reset"]), #report-found-form textarea {
+    background-color: var(--dark);
+    border: none;
+    border-bottom: 3px dashed var(--secondary);
+    color: var(--light);
+    position: relative;
+    padding: 5px;
+    transition: border 0.5s ease;
+}
+
+#report-found-form input:focus, #report-found-form textarea:focus {
+    outline: none;
+    border-bottom-color: var(--primary);
+    border-bottom-style: solid;
+}
+
+#form-submit, #form-reset {
+    margin: 1rem auto;
+    padding: 12px;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+#form-submit:hover, #form-submit:focus, #form-reset:hover, #form-reset:focus {
+    border: 2px solid var(--light);
+}
+
+#form-item-category {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    border-bottom: 3px dashed var(--secondary);
+}
+
+#form-item-category:focus {
+    outline: none;
+    border-bottom-color: var(--primary);
+    border-bottom-style: solid;
+}
+
+.form-fieldset {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#form-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+#form-item-image-label {
+    font-size: 14px;
+    margin: 1rem auto;
+    padding: 12px;
+    cursor: pointer;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+#form-item-image-label:hover {
+    border: 2px solid var(--light);
+}
+
+#form-found-when-container {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

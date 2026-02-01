@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost-n-Found</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #success-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        #success-message {
+            text-align: center;
+        }
+
+        #link-back {
+            text-decoration: none;
+            margin: 1rem auto;
+            padding: 12px;
+            cursor: pointer;
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        #link-back:hover, #link-back:focus {
+            border: 2px solid var(--light);
+        }
+    </style>
 </head>
 <body>
     <nav id="nav">
@@ -19,9 +47,9 @@
         <h2 id="banner-subheadline">Newport High School</h1>
     </div>
 
-    <div id="index-container">
-        <a href="/items" id="index-link" class="hover-animation" data-hover-color="light">View Items</a>
-        <a href="/report-found" id="index-link" class="hover-animation" data-hover-color="light">Report Found Item</a>
+    <div id="success-container">
+        <h1 id="success-message">Successfully Submitted Report</h1>
+        <a id="link-back" href="/"><span class="hover-animation" data-hover-color="light">Back to home</span></a>
     </div>
 
     <footer id="footer">
