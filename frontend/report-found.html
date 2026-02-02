@@ -20,44 +20,51 @@
         <h2 id="banner-subheadline">Newport High School</h1>
     </div>
 
-    <form action="/api/items" method="post" id="report-found-form">
+    <form action="/api/items" method="post" enctype="multipart/form-data" id="report-found-form">
         <h1 id="form-title">Report Found Item</h1>
 
         <fieldset class="form-fieldset">
             <legend>Basic Info</legend>
 
-            <input type="text" name="form-item-name" id="form-item-name" placeholder="Item Name" required>
+            <input type="text" name="name" id="form-item-name" placeholder="Item Name" required>
 
-            <select name="form-item-category" id="form-item-category" required>
-                <option value="Clothing/Jewelry">Clothing/Jewelry</option>
-                <option value="Electronic Devices">Electronic Devices</option>
-                <option value="Drink/Snack Containers">Drink/Snack Containers</option>
-                <option value="School Supplies">School Supplies</option>
-                <option value="Sports Equipment">Sports Equipment</option>
-                <option value="Keys/Keychains">Keys/Keychains</option>
-                <option value="Valuables">Valuables</option>
-                <option value="Miscellaneous">Miscellaneous</option>
-            </select>
+            <div id="form-item-category-container">
+                <label for="form-item-category">Item Category</label>
+                <select name="category" id="form-item-category" required>
+                    <option value="Clothing/Jewelry">Clothing/Jewelry</option>
+                    <option value="Electronic Devices">Electronic Devices</option>
+                    <option value="Drink/Snack Containers">Drink/Snack Containers</option>
+                    <option value="School Supplies">School Supplies</option>
+                    <option value="Sports Equipment">Sports Equipment</option>
+                    <option value="Keys/Keychains">Keys/Keychains</option>
+                    <option value="Valuables">Valuables</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                </select>
+            </div>
 
-            <textarea name="form-item-description" id="form-item-description" placeholder="Item Description" required rows="3"></textarea>
+            <textarea name="description" id="form-item-description" placeholder="Item Description" required rows="3"></textarea>
+            <textarea name="additional_information" id="form-item-additional-information" placeholder="Additonal Information" rows="3"></textarea>
 
-        <div id="form-item-image">
-            <label for="form-item-image-upload" id="form-item-image-label"><span class="hover-animation" data-hover-color="light">Upload Image of Item</span></label>
-            <input type="file" name="form-item-image-upload" id="form-item-image-upload" accept="image/*" hidden>
-        </div>
+            <div id="form-item-image">
+                <label for="form-item-image-upload" id="form-item-image-label"><span class="hover-animation" data-hover-color="light">Upload Image of Item</span></label>
+                <input type="file" name="image" id="form-item-image-upload" accept="image/*" hidden>
+                <p id="form-item-image-status">No file chosen</p>
+            </div>
+
+            <input type="text" name="location_stored" id="form-item-location-stored" placeholder="Location Stored" required>
 
         </fieldset>
 
         <fieldset class="form-fieldset">
             <legend>Finder Info</legend>
 
-            <input type="text" name="form-finder-fname" id="form-finder-name" placeholder="First Name" required>
-            <input type="text" name="form-finder-lname" id="form-finder-name" placeholder="Last Name" required>
-            <input type="text" name="form-found-where" id="form-found-where" placeholder="Found Where" required>
+            <input type="text" name="finder_fname" id="form-finder-name" placeholder="First Name" required>
+            <input type="text" name="finder_lname" id="form-finder-name" placeholder="Last Name" required>
+            <input type="text" name="found_where" id="form-found-where" placeholder="Found Where" required>
 
             <div id="form-found-when-container">
                 <label for="form-found-when">Found When (Approximately)</label>
-                <input type="datetime-local" name="form-found-when-time" id="form-found-when-time" required>
+                <input type="datetime-local" name="found_when" id="form-found-when-time" required>
             </div>
 
         </fieldset>
@@ -72,5 +79,18 @@
         <p>Made by Cooper Ericksen for the 2026 FBLA Website Coding & Development</p>
         <a class="hover-animation" data-hover-color="light" href="https://github.com/coopericksen/lostnfound" target="_blank">Github Repository</a>
     </footer>
+
+    <script>
+        const image_status = document.getElementById("form-item-image-status");
+        const image_input = document.getElementById("form-item-image-upload");
+
+        image_input.addEventListener("change", () => {
+            if (image_input.files.length > 0) {
+                image_status.textContent = image_input.files[0].name;
+            } else {
+                image_status.textContent = "No file chosen."
+            }
+        });
+    </script>
 </body>
 </html>

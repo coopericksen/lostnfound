@@ -20,6 +20,7 @@
     position: relative;
     padding: 5px;
     transition: border 0.5s ease;
+    height: 100%;
 }
 
 #report-found-form input:focus, #report-found-form textarea:focus {
@@ -60,8 +61,8 @@
 .form-fieldset {
     /* display: flex; */
     /* flex-direction: column; */
-    gap: 2rem;
-    padding: 2rem;
+    gap: 4rem;
+    padding: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -87,7 +88,12 @@
     border: 2px solid var(--light);
 }
 
-#form-found-when-container {
+#form-item-image-status {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+#form-found-when-container, #form-item-category-container {
     font-size: 14px;
     display: flex;
     flex-direction: column;

@@ -22,13 +22,13 @@ load_items_button.addEventListener("click", async () => {
 });
 
 let testObjects = [{
-    "id": 4,
+    "id": 123,
     "uuid": "4f32c0ff-0890-411e-9280-41e403590e73",
     "created_at": "2026-01-21T04:09:00.832682+00:00",
     "name": "Inconspicuous Sock",
-    "description": "An object to test the backend. Stinky.",
+    "description": "An object to test the backendddd.",
     "category": "clothing",
-    "image_url": "https://ahqdsddsjuotjkkqcnbs.supabase.co/storage/v1/object/sign/lostnfound-images/wallet.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGIzZDFkMi1hMjEyLTRiZmQtYTU5My05NDYyNzM0NDA4MzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsb3N0bmZvdW5kLWltYWdlcy93YWxsZXQucG5nIiwiaWF0IjoxNzY4OTczOTkwLCJleHAiOjE4MDA1MDk5OTB9.1PvRTWdbVoP0nb1tfsGDcsHGLSSfuCt5YMxzxPeOooc",
+    "image_url": "",
     "additional_information": "",
     "found_by": "Hu Man",
     "found_where": "Hallway",
@@ -37,13 +37,13 @@ let testObjects = [{
     "location_stored": "Counselor Center",
     "claimed": false
 }, {
-    "id": 5,
+    "id": 124,
     "uuid": "4f32c0ff-0890-411e-9280-41e403590e73",
     "created_at": "2026-01-21T04:09:00.832682+00:00",
-    "name": "goon Sock",
-    "description": "An object to test the backend. Stinky.",
+    "name": "Random thing",
+    "description": "An object to test the backend.",
     "category": "valuable",
-    "image_url": "https://ahqdsddsjuotjkkqcnbs.supabase.co/storage/v1/object/sign/lostnfound-images/wallet.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGIzZDFkMi1hMjEyLTRiZmQtYTU5My05NDYyNzM0NDA4MzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsb3N0bmZvdW5kLWltYWdlcy93YWxsZXQucG5nIiwiaWF0IjoxNzY4OTczOTkwLCJleHAiOjE4MDA1MDk5OTB9.1PvRTWdbVoP0nb1tfsGDcsHGLSSfuCt5YMxzxPeOooc",
+    "image_url": "",
     "additional_information": "",
     "found_by": "Hu Man",
     "found_where": "Hallway",
@@ -52,14 +52,14 @@ let testObjects = [{
     "location_stored": "Counselor Center",
     "claimed": false
 }, {
-    "id": 6,
+    "id": 125,
     "uuid": "4f32c0ff-0890-411e-9280-41e403590e73",
     "created_at": "2026-01-21T04:09:00.832682+00:00",
-    "name": "Ew Sock",
-    "description": "An object to test the backend. Stinky.",
+    "name": "Other Sock",
+    "description": "An object to test the backend. N/A.",
     "category": "clothing",
-    "image_url": "https://ahqdsddsjuotjkkqcnbs.supabase.co/storage/v1/object/sign/lostnfound-images/wallet.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGIzZDFkMi1hMjEyLTRiZmQtYTU5My05NDYyNzM0NDA4MzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsb3N0bmZvdW5kLWltYWdlcy93YWxsZXQucG5nIiwiaWF0IjoxNzY4OTczOTkwLCJleHAiOjE4MDA1MDk5OTB9.1PvRTWdbVoP0nb1tfsGDcsHGLSSfuCt5YMxzxPeOooc",
-    "additional_information": "if yk yk",
+    "image_url": "",
+    "additional_information": "...",
     "found_by": "Hu Man",
     "found_where": "Hallway",
     "found_when_date": "2026-01-18",
@@ -124,4 +124,4 @@ function renderItems(items) {
 
 }
 
-renderItems(testObjects);
+// renderItems(testObjects);
