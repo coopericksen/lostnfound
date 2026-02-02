@@ -112,10 +112,12 @@ function renderItems(items) {
         }
 
         const found_countainer = createSubEl(element, "div", "", ["item-finder-container"]);
-        const found_by = createSubEl(found_countainer, "p", `Found by: ${item.found_by}`);
-        const found_when_time = createSubEl(found_countainer, "p", `Found at: ${item.found_when_time}`);
+        const found_by = createSubEl(found_countainer, "p", `Found by: ${item.finder_fname} ${item.finder_lname}`);
+        let time_found = item.found_when.split("T").pop();
+        let date_found = item.found_when.split("T")[0];
+        const found_when_time = createSubEl(found_countainer, "p", `Found when: ${time_found}`);
         const found_where = createSubEl(found_countainer, "p", `Found in: ${item.found_where}`);
-        const found_when_date = createSubEl(found_countainer, "p", `Found on: ${item.found_when_date}`);
+        const found_when_date = createSubEl(found_countainer, "p", `Found on: ${date_found}`);
 
         const claimed = createSubEl(element, "p", item.claimed ? "Item has been claimed" : "Item has not been claimed");
 

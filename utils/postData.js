@@ -19,7 +19,6 @@ export async function postData(req, res) {
 
     // Collect file packets
     busboy.on("file", (fieldname, file, info) => {
-        console.log(fieldname)
         file_name = info.filename;
         file_mime = info.mimeType;
 
