@@ -6,7 +6,14 @@ load_items_button.addEventListener("click", async () => {
 
     try {
 
-        const response = await fetch("/api/items");
+        const response = await fetch("/api/items", {
+            method: "GET",
+            headers: {
+                "x-admin-username": window.adminUsername,
+                "x-admin-password": window.adminPassword,
+                "x-fetch-approved": true,
+            }
+        });
 
         if (!response.ok) {
             throw new Error("HTTP error. Status code: ", response.status);
@@ -84,7 +91,6 @@ function createSubEl(parent_element, type, param="", classes=[]) {
 
 function renderItems(items) {
     items.forEach(item => {
-        console.log(item);
 
         if (ids_loaded.has(item.id)) { // skip item if id already registered as loaded
             return;

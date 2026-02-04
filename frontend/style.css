@@ -133,6 +133,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
+    align-items: center;
 }
 
 #load-items-button {
@@ -270,15 +271,13 @@ body {
 
 #index-container {
     color: var(--light);
-    background-color: var(--secondary);
     width: 80vw;
     height: 20vh;
     margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    border-radius: 15px;
+    gap: 8rem;
 }
 
 #index-link {
@@ -286,4 +285,64 @@ body {
     text-decoration: none;
     text-align: center;   
     font-size: 2rem;
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+#form-admin-login {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-inline: auto;
+    gap: 3rem;
+}
+
+#form-admin-user, #form-admin-pass {
+    background-color: var(--dark);
+    border: none;
+    border-bottom: 3px dashed var(--secondary);
+    color: var(--light);
+    position: relative;
+    padding: 5px;
+    transition: border 0.5s ease;
+    height: 100%;
+}
+
+#form-admin-user:focus, #form-admin-pass:focus {
+    outline: none;
+    border-bottom-color: var(--primary);
+    border-bottom-style: solid;
+}
+
+#form-admin-title {
+    text-align: center;
+}
+
+#form-admin-submit {
+    margin: 1rem auto;
+    padding: 12px;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+#form-admin-submit:hover, #form-admin-submit:focus {
+    border: 2px solid var(--light);
+}
+
+.item-approve-button {
+    margin: 1rem auto;
+    padding: 12px;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.items-approve-button:hover {
+    border: 2px solid var(--light);
 }

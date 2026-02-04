@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost-n-Found</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
+    <script src="admin.js" defer></script>
 </head>
 <body>
     <nav id="nav">
@@ -21,8 +21,15 @@
         <h2 id="banner-subheadline">Newport High School</h1>
     </div>
 
-    <main id="items-main">
-        <h1 style="text-align: center;">Item Listings</h1>
+    <form id="form-admin-login">
+        <h1 id="form-admin-title">Admin Login</h1>
+        <input type="text" placeholder="Username" id="form-admin-user" name="username">
+        <input type="password" placeholder="Password" id="form-admin-pass" name="password">
+        <input type="submit" id="form-admin-submit">
+    </form>
+
+    <main id="items-main" style="visibility: hidden;">
+        <h1 style="text-align: center;">Pending Items</h1>
         <div id="item-container"></div>
         <button id="load-items-button"><span class="hover-animation" data-hover-color="light">Load Items</span></button>
     </main>

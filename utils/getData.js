@@ -8,9 +8,9 @@ const supabase = createClient(
     process.env.SUPABASE_API_KEY
 );
 
-export async function getData() {
+export async function getData(approved) {
     try {
-        const data = await supabase.from("items").select("*");
+        const data = await supabase.from("items").select("*").eq("approved", approved);
         return data;
     } catch (error) {
         console.log("Error connecting to database: ", error);
