@@ -6,15 +6,10 @@
     <title>Lost-n-Found</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="form-style.css">
+    <script src="htmlInject.js" defer></script>
 </head>
 <body>
-    <nav id="nav">
-        <a href="/" class="nav-link" id="nav-link-logo"><img src="./images/nhslogo.png" alt="nhslogo"></a>
-        <a href="/" class="nav-link"><span class="hover-animation" data-hover-color="light">Home</span></a>
-        <a href="/items" class="nav-link"><span class="hover-animation" data-hover-color="light">View Items</span></a>
-        <a href="/report-found" class="nav-link"><span class="hover-animation" data-hover-color="light">Report Found Item</span></a>
-        <a href="/admin" class="nav-link"><span class="hover-animation" data-hover-color="light">Admin Login</span></a>
-    </nav>
+    <div id="placeholder-nav"></div>
 
     <div id="banner">
         <h1 id="banner-headline">Lost-n-Found</h1>
@@ -76,10 +71,7 @@
         </div>
     </form>
 
-    <footer id="footer">
-        <p>Made by Cooper Ericksen for the 2026 FBLA Website Coding & Development Event</p>
-        <a class="hover-animation" data-hover-color="light" href="https://github.com/coopericksen/lostnfound" target="_blank">Github Repository</a>
-    </footer>
+    <div id="placeholder-footer"></div>
 
     <script>
         const image_status = document.getElementById("form-item-image-status");
