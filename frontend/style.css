@@ -37,11 +37,25 @@ body {
     transition: background-color 0.5s ease;
     border-radius: 1rem;
     align-items: center;
+    font-size: clamp(8px, 2.2vw, 1.2rem);
 }
 
 .nav-link:hover {
     background-color: var(--secondary);
     /* color: var(--dark); */
+}
+
+@media (max-width: 750px) {
+    #nav-link-logo {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #nav {
+        gap: 4px;
+    }
+
+
 }
 
 #nav-link-logo {
@@ -67,7 +81,7 @@ body {
 #banner-headline {
     text-align: center;
     align-self: center;
-    font-size: 90px;
+    font-size: clamp(20px, 8vw, 90px);
     position: relative;
     width: max-content;
     margin-inline: auto;
@@ -121,7 +135,7 @@ body {
 }
 
 #banner-subheadline {
-    font-size: 30px;
+    font-size: clamp(10px, 3vw, 30px);
     text-align: center;
     margin-top: 0.5rem;
     /* text-decoration: underline; */
@@ -169,6 +183,7 @@ body {
     color: #000;
     padding: 1rem;
     margin: 1rem;
+    font-size: clamp(6px, 2vw, 1rem);
 }
 
 .item > * {
@@ -206,6 +221,17 @@ body {
     height: 100%;
 }
 
+@media (max-width: 750px) {
+    #item-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .item-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
 #footer {
     /* position: absolute; */
     bottom: 0;
@@ -220,6 +246,7 @@ body {
     gap: 5rem;
     margin-top: 8rem;
     padding: 1rem;
+    font-size: clamp(8px, 1.8vw, 1.2rem);
 }
 
 #footer a {
@@ -271,23 +298,33 @@ body {
 
 #index-container {
     color: var(--light);
-    width: 80vw;
+    width: 100%;
     height: 20vh;
     margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
+    gap: 2rem;
 }
 
-#index-link {
+.index-link {
     color: var(--light);
     text-decoration: none;
     text-align: center;   
-    font-size: 2rem;
+    font-size: clamp(8px, 2.5vw, 2rem);
     background-color: var(--secondary);
     padding: 2rem;
     border-radius: 15px;
+}
+
+@media (max-width: 750px) {
+    #index-container {
+        flex-direction: column;
+    }
+
+    .index-link {
+        padding: 1rem;
+    }
 }
 
 #form-admin-login {
