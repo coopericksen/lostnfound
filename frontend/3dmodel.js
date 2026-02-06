@@ -54,7 +54,7 @@ const spotlight4 = new THREE.SpotLight(0xffffff, 3000, 100, 0.2, 0.5);
 spotlight4.position.set(-5, -25, 0);
 scene.add(spotlight4);
 
-const loader = new GLTFLoader().setPath('/frontend/assets/backpack/');
+const loader = new GLTFLoader().setPath('assets/backpack/');
 loader.load('backpack.gltf', (gltf) => {
     const mesh = gltf.scene;
     // mesh.position.set(0, 1.05, -1);
