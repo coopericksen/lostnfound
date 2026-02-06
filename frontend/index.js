@@ -125,6 +125,7 @@ function renderItems(items) {
         const found_where = createSubEl(found_countainer, "p", `Found in: ${item.found_where}`);
         const found_when_date = createSubEl(found_countainer, "p", `Found on: ${date_found}`);
 
+        const location_stored = createSubEl(element, "p", `Location stored: ${item.location_stored}`);
         const claimed = createSubEl(element, "p", item.claimed ? "Item has been claimed" : "Item has not been claimed");
 
 

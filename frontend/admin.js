@@ -106,6 +106,7 @@ function renderItems(items) {
         const found_when_time = createSubEl(found_container, "p", `Found when: ${time_found}`);
         const found_where = createSubEl(found_container, "p", `Found in: ${item.found_where}`);
         const found_when_date = createSubEl(found_container, "p", `Found on: ${date_found}`);
+        const location_stored = createSubEl(element, "p", `Location stored: ${item.location_stored}`);
 
         const approve_button = createSubEl(element, "button", `Approve Item Listing`, ["item-approve-button"]);
         approve_button.addEventListener("click", async () => {

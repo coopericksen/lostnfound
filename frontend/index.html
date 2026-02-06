@@ -6,6 +6,16 @@
     <title>Lost-n-Found</title>
     <link rel="stylesheet" href="style.css">
     <script src="htmlInject.js" defer></script>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.182.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.182.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="3dmodel.js" defer></script>
 </head>
 <body>
     <div id="placeholder-nav"></div>
@@ -14,6 +24,8 @@
         <h1 id="banner-headline">Lost-n-Found</h1>
         <h2 id="banner-subheadline">Newport High School</h1>
     </div>
+
+    <div id="model-container"></div>
 
     <div id="index-container">
         <a href="/items" class="index-link"><span class="hover-animation" data-hover-color="light">View Items</span></a>
